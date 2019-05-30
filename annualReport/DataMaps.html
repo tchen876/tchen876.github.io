@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>DataMaps</title>
+
+      <link rel="stylesheet" href="http://datamaps.github.io/styles/bootstrap.min.css">
+      <link rel="stylesheet" href="http://datamaps.github.io/styles/bootstrap-responsive.min.css">
+<style>
+* { font-family: "source-sans-pro";}
+.map { position: relative; margin: 0 auto; width: 950px; height: 500px;}
+</style>
+    </head>
+    <body class="tk-source-sans-pro">
+    <script src="http://datamaps.github.io/scripts/d3.min.js"></script>
+    <script src="http://datamaps.github.io/scripts/topojson.js"></script>
+    <script src="http://datamaps.github.io/scripts/0.5.8/datamaps.all.js"></script>
+    <script type="text/javascript" src="http://use.typekit.net/vzv8gnr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <div class="container">
+      <section class="examples">
+        <article>
+          <div class="map" id="bubbles"></div>
+          <script data-info="Map source for bubbles example">
+var bubble_map = new Datamap({
+  element: document.getElementById("bubbles"),
+  geographyConfig: {
+    popupOnHover: false,
+    highlightOnHover: false
+  },
+  fills: {
+    defaultFill: '#d2e5f3',
+    USA: '#7fcdb8',
+    CHI: '#e5cb95',
+	EU: "#f37e37",
+	AUS: "#90b0ba",
+	BRZ: "#3cbde7"
+  }
+});
+bubble_map.bubbles([
+  {
+    name: 'Brazil',
+    radius: 23,
+    centered: 'BRA',
+    country: 'BRZ',
+    yeild: 23,
+    fillKey: 'BRZ',
+    //date: '1954-03-01'
+  },
+  {
+    name: 'US',
+    radius: 70,
+    yeild: 70,
+    country: 'USA',
+    centered: 'USA',
+    //date: '1986-06-05',
+    significance: 'Centered on US',
+    fillKey: 'USA'
+  },
+  {
+    name: 'EU',
+    radius: 45,
+    yeild: 45,
+    country: 'EU',
+    significance: 'EU',
+    fillKey: 'EU',
+    latitude: 48.415,
+    longitude: 15.1619
+  },
+  {
+    name: 'Castle Bravo',
+    radius: 35,
+    yeild: 35,
+    country: 'AUS',
+    significance: 'AUS',
+    fillKey: 'AUS',
+    latitude: -20.5,
+    longitude: 145.1619
+  },{
+    name: 'Shanghai',
+    radius: 30,
+    yeild: 30,
+    country: 'CHI',
+    fillKey: 'CHI',
+    significance: 'CHI',
+    date: '1961-10-31',
+    latitude: 37.482,
+    longitude: 114.5854
+  }
+], {
+  popupTemplate: function(geo, data) {
+    return '<div class="hoverinfo">' + data.yeild + '<br/>' + data.country + '</div>'
+  }
+});
+          </script>
+        </article>
+      </section>
+    </div>
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.5/styles/github.min.css">
+<script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
+<script>
+  var sections = document.getElementsByClassName('map');
+  var eventName = 'click';
+
+  [].forEach.call(sections, function(section) {
+    var parent = section.parentNode;
+    parent.getElementsByClassName('options')[0].innerHTML += '<pre><code>' + parent.getElementsByTagName('script')[0].innerHTML.replace('<', '&lt;').replace('>', '&gt;') + '</code></pre>';
+
+    parent.getElementsByClassName('options')[0].addEventListener(eventName, function(evt) {
+      if ( evt.currentTarget.classList.contains('open') ) {
+        evt.currentTarget.classList.remove('open');
+      }
+      else {
+        evt.currentTarget.classList.add('open');
+      }
+    }, false);
+
+    parent.getElementsByTagName('pre')[0].addEventListener(eventName, function(evt) {
+      evt.stopPropagation();
+    }, false);
+
+  });
+
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36315921-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
+</html>

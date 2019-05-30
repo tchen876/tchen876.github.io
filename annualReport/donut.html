@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+</style>
+<body>
+  <div id="chart"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="d3.donut.js"></script>
+<script>
+
+var getData = function(){
+  var size = 3;
+  var data = {};
+  var text = "";
+  for(var i=0; i<size; i++){
+    data["data-"+(i+1)] = Math.round(Math.random() * 100);
+    text += "data-"+ (i+1) +" = " + data["data-"+(i+1)] + "<br/>";
+  };
+  d3.select("#data").html(text);
+  return data;
+};
+
+var chart = donut()
+              .$el(d3.select("#chart"))
+              .data(getData())
+              .render();
+
+</script>
+</body>

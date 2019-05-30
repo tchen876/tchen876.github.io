@@ -1,0 +1,160 @@
+
+<!DOCTYPE html><html class=''>
+<head>
+<script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script>
+
+<!--<link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+<link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+<link rel="canonical" href="https://codepen.io/benlister/pen/bNeLQy" />-->
+
+
+<style class="cp-pen-styles">h1 { 
+  font-family: helvetica, arial, sans-serif; 
+  text-align:center; 
+  margin-top: 80px;
+}
+
+
+.viz-portfolio-delinquent-status {
+  font-family: helvetica, arial, sans-serif; 
+  margin: 0 auto;
+  font-size: 10px;
+  width: 450px;
+  height: 300px
+}
+
+
+	path { fill: #83B0EA;}	
+.domain { 
+		fill: none; 
+		stroke: #000; 
+		stroke-width: 1px; 
+	} 
+</style>
+</head>
+<body>
+<div class="viz-portfolio-delinquent-status"></div>
+
+<!--<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+<script src='https://d3js.org/d3.v3.min.js'></script>
+<script >var data = [
+       {
+            "interest_rate":"2HFY17",
+            "Revenue":60,
+            "Revenue2":20
+            
+         },
+         {
+            "interest_rate":"1HFY17",
+            "Revenue2":2,
+            "Revenue":30
+            
+           
+         }
+];
+
+	var margin = {
+				top: 20,
+				right: 20,
+				bottom: 40,
+				left: 60
+			},
+				width = 450 - margin.left - margin.right,
+				height = 315 - margin.top - margin.bottom,
+				that = this;
+
+
+			var x = d3.scale.ordinal().rangeRoundBands([0, width], .3);
+
+			var y = d3.scale.linear().rangeRound([height, 0]);
+
+			var color = d3.scale.category20();
+
+			var xAxis = d3.svg.axis().scale(x).orient("bottom");
+
+			var yAxis = d3.svg.axis().scale(y).orient("left").tickFormat(d3.format(".0%"));
+
+			var svg = d3.select(".viz-portfolio-delinquent-status").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+			color.domain(d3.keys(data[0]).filter(function (key) {
+				return key !== "interest_rate";
+			}));
+
+
+			data.forEach(function (d) {
+				var y0 = 0;
+
+				d.rates = color.domain().map(function (name) {
+					console.log();;
+					return {
+						name: name,
+						y0: y0,
+						y1: y0 += +d[name],
+						amount: d[name]
+					};
+				});
+				d.rates.forEach(function (d) {
+					d.y0 /= y0;
+					d.y1 /= y0;
+				});
+
+				console.log(data);
+			});
+
+			data.sort(function (a, b) {
+				return b.rates[0].y1 - a.rates[0].y1;
+			});
+
+			x.domain(data.map(function (d) {
+				return d.interest_rate;
+			}));
+
+			svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
+
+			svg.append("g").attr("class", "y axis").call(yAxis);
+
+			var interest_rate = svg.selectAll(".interest-rate").data(data).enter().append("g").attr("class", "interest-rate").attr("transform", function (d) {
+				return "translate(" + x(d.interest_rate) + ",0)";
+			});
+
+			interest_rate.selectAll("rect").data(function (d) {
+				return d.rates;
+			}).enter().append("rect").attr("width", x.rangeBand()).attr("y", function (d) {
+				return y(d.y1);
+			}).attr("height", function (d) {
+				return y(d.y0) - y(d.y1);
+			}).style("fill", function (d) {
+				return color(d.name);
+			}).on('mouseover', function (d) {
+				var total_amt;
+				total_amt = d.amount;
+
+
+
+				console.log('----');
+				d3.select(".chart-tip").style('opacity', '1').html('Amount: <strong>$' + that.numberWithCommas(total_amt.toFixed(2)) + '</strong>');
+
+			}).on('mouseout', function () {
+				d3.select(".chart-tip").style('opacity', '0');
+			});
+
+			var legend = svg.selectAll(".legend").data(color.domain().slice().reverse()).enter().append("g").attr("class", "legend").attr("transform", function (d, i) {
+				return "translate(" + i * -70 + ",283)";
+			});
+
+
+			legend.append("rect").attr("x", width + -53).attr("width", 10).attr("height", 10).style("fill", color);
+
+			legend.append("text").attr("x", width - 40).attr("y", 5).attr("width", 40).attr("dy", ".35em").style("text-anchor", "start").text(function (d) {
+				return d;
+			});
+
+
+
+//# sourceURL=pen.js
+</script>
+</body></html>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CloudUX Lab</title>
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <style>
+		.3column {width:100%; font-size:22px;}
+		.num{font-size:36px;margin-top:30px;margin-bottom:0px;font-weight: bold;color:333;}
+		.column-left{ float: left; width: 33%; }
+		.column-right{ float: right; width: 33%;}
+		.column-center{ display: inline-block; width: 33%;}
+		.imgContainer{float:left; margin: 20px;}
+		.imgContainer img{height:70px;}
+		
+		.ic-info{color:#fff;background-color:#74c476;padding:38px 18px;font-size:24px;line-height:4.5em;border-radius:100%}
+		.ic-portion{color:#fff;background-color:#62c7ea;padding:38px 18px;font-size:24px;line-height:4.5em;border-radius:100%}
+		
+		#content {
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+}
+
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar {
+		display: none;
+	}
+
+}
+
+
+#content {
+	background: #ffffff;
+}
+#sidebar {
+	/*background: #f0efef;*/
+}
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+
+p.small{
+	line-height: 70%;
+	
+}
+
+		</style>
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="index.html">CloudUX Lab</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">2017</a></li>
+                            <li><a href="index.html">2016</a></li>      
+                            <li><a href="index.html">2015</a></li>
+							<!--<li>
+								<a href="#" class="icon fa-angle-down">Layouts</a>
+								<ul>
+									<li><a href="generic.html">Generic</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="elements.html">Elements</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option One</a></li>
+											<li><a href="#">Option Two</a></li>
+											<li><a href="#">Option Three</a></li>
+											<li><a href="#">Option Four</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>-->
+							<!--<li><a href="#" class="button">Sign Up</a></li>-->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<div id="banner">
+					<h2>FY2017 REPORT</h2>
+					<!--<p>2017</p>-->
+				</div>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<!--<section class="box special">
+						<header class="major">
+							<h2>Tours</h2>
+							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+						</header>
+						<span class="image featured"><center><iframe class="embed-responsive-item" src="bar.html" scrolling="no" height="550"></iframe></center></span>
+					</section>-->
+                    
+                    <!--<section class="box special">
+                    	<span class="icon major tour fa-group"></span>
+						<header class="major">
+							<h2><strong>430</strong> tours since opened</span></h2>
+                            <div class="3column">
+                               <div class="column-left">
+                                    <div class="num">82</div>
+                                    <p class="clear">FY15 (partial)</p>
+                               </div>
+                               <div class="column-center">
+                                    <div class="num">153</div>
+                                    <p class="clear">FY16</p>
+                               </div>
+                               <div class="column-right">
+                               		<div class="num">195</div>
+                                    <div><p class="clear">FY17</p></div>
+                               </div>
+                            </div>
+						</header>-->
+						<!--<span class="image featured"><center><iframe class="embed-responsive-item" src="bar.html" scrolling="no" height="550"></iframe></center></span>-->
+                        <!--<center><iframe class="embed-responsive-item" src="barChart.html" scrolling="no" height="400"></iframe></center>
+					</section>-->
+                    <br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+                    <section class="box special">
+						<header class="major">
+                        	<a class="ic-info">
+                                  <span class="fa fa-arrow-up"> 27%</span> 
+                                </a>
+							<h2>FY17 <span class="num">195</span> CloudUX Lab Tours</h2>
+                            <!--<p>increase 27% from FY2016 to FY2017</p>-->
+						</header>
+						<center><iframe class="embed-responsive-item" src="areaNew.html" scrolling="no" height="450"></iframe></center>
+					</section>
+                    
+                    <section class="box special features">
+						<div class="features-row">
+							<!--<section>
+                                <a class="ic-info">
+                                  <span class="fa fa-arrow-up"> 27%</span> 
+                                </a>
+								<div><p class="clear"><h3>2016 -2017 increase</h3></p></div>
+                             
+								<span><center><iframe class="embed-responsive-item" src="bar3.html" scrolling="no" height="350"></iframe></center></span>
+							</section>-->
+                            <section>
+								<!--<span class="icon major fa-area-chart accent3"></span>-->
+                                <!--<div class="contentData">
+                                    <img src="images/arrowUp.png" class="my-icon" width="24" height="26" alt=""/>
+                                    <div class="number">40%</div>
+                                </div>-->
+                                <a class="ic-portion">
+                                  <span class="fa fa-pie-chart"></span> 45%
+                                </a>
+								<div><p class="clear"><h3>2017 Tours Portion of Total</h3></p></div>
+								<span><center><iframe class="embed-responsive-item" src="ring2.html" scrolling="no" height="400"></iframe></center></span>
+							</section>
+                            <section>
+								<!--<span class="icon major fa-bolt accent2"></span>-->
+                                <span class="icon major revenue fa-money"></span>
+								<h3>FY17 revenue influence</h3>
+                                <p>CloudUX Labs influenced <strong>$42.6M</strong> of FY17 revenue. Of that, <strong>$40.2M</strong> included Cloud Applications revenue.</p>
+								<span><center><iframe class="embed-responsive-item" src="revenue.html" scrolling="no" height="350"></iframe></center></span>
+							</section>
+							
+						</div>
+					</section>
+                    
+                    <section class="box special">
+                    	<span class="icon major tour fa-group"></span>
+						<header class="major">
+							<h2>Monthly Lab Tours</h2>
+                            <div class="3column">
+                               <div class="column-left">
+                               		<div class="num"><span style="color:#a6b4c7">13</span></div>
+                                    <div><p class="clear">2015 average per month</p></div>
+                               </div>
+                               <div class="column-center">
+                                    <div class="num"><span style="color:#74c476">13</span></div>
+                                    <p class="clear">2016 average per month</p>
+                               </div>
+                               <div class="column-right">
+                               		<div class="num"><span style="color:#fd8d3c">16</span></div>
+                                    <p class="clear">2017 average per month</p>
+                               </div>
+                            </div>
+						</header>
+						<span class="image featured"><center><iframe class="embed-responsive-item" src="bar3.html" scrolling="no" height="500"></iframe></center></span>
+					</section>
+                    
+                    <section class="box special">
+						<header class="major">
+                        	<span class="icon major local fa-map-marker"></span>
+							<h2>Attendees Locations</h2>
+							<!--<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+							adipiscing nunc adipiscing. Condimentum turpis massa.</p>-->
+						</header>
+						<span class="image featured"><center><iframe class="embed-responsive-item" src="DataMaps.html" scrolling="no" height="550"></iframe></center></span>
+					</section>
+                    
+                    <!--<section class="box special">
+						<header class="major">
+							<h2>Tours</h2>
+							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+						</header>
+						<span class="image featured"><center><iframe class="embed-responsive-item" src="donut3.html" scrolling="no" height="600"></iframe></center></span>
+					</section>-->
+                    
+                    <!--<section class="box special features">
+						<div class="features-row">
+							<section>
+                                <span class="icon major revenue fa-money"></span>
+								<h3>FY17 revenue influence</h3>
+                                <p>CloudUX Labs influenced <strong>$42.6M</strong> of FY17 revenue. Of that, <strong>$40.2M</strong> included Cloud Applications revenue.</p>
+								<span><center><iframe class="embed-responsive-item" src="revenue.html" scrolling="no" height="350"></iframe></center></span>
+							</section>
+							<section>
+								
+								<h3>FY17 revenue influence</h3>
+								<span><center><iframe class="embed-responsive-item" src="line.html" scrolling="no" height="400"></iframe></center></span>
+							</section>
+						</div>
+					</section>-->
+
+					<!--<section class="box special features">
+						<div class="features-row">
+							<section>
+								<span class="icon major fa-cloud accent4"></span>
+								<h3>Sed feugiat</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+							</section>
+							<section>
+								<span class="icon major fa-signal"></span>
+								<h3>Enim phasellus</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                            </section>
+						</div>
+					</section>-->
+                    
+                    <section class="box special features">
+						<div class="features-row">
+                            <span class="icon major key fa-key"></span>
+                            <h2><strong>26</strong> key accounts hosted</h2>
+                            <p></p>
+                            <div class="imgContainer">
+                                <img src="images/axp.png" height="70" alt=""/>
+                            </div>
+                            <div class="imgContainer">
+                                <img src="images/Fidelity-logo.png"/>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/icici.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/anz.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/firstrand.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/lg.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/standardChartered.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/bancoDeChile.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/fujitsu.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/nab.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/toyota.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/bt.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/ge.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/nomura.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/usAirForce.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/vodafone.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/nttData.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/hundai.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/huawei.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/csco.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/westpac.png" />
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/tata.png" />
+                            </div>
+						</div>
+					</section>
+                    
+                    <section class="box special features">
+                    	<div class="features-row">
+                            <span class="icon major key fa-key"></span>
+                            <h2>Key accounts won</h2>
+                            <center><iframe class="embed-responsive-item" src="accounts.html" scrolling="no" height="300"></iframe></center>
+                            <div class="imgContainer">
+                                <img src="images/bt.png" alt=""/>
+                                <p>$13.6M</p>
+                            </div>
+                            <div class="imgContainer">
+                                <img src="images/icici.png"/>
+                                <p>$12.2M</p>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/nomura.png" />
+                                <p>$4.9M</p>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/vodafone.png" />
+                                <p>$1.48M</p>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/nttData.png" />
+                                <p>$1.2M</p>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/huawei.png" />
+                                <p>$915K</p>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/csco.png" />
+                                <p>$794K</p>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/westpac.png" />
+                                <p>$242K</p>
+                            </div>
+                            <div class="imgContainer">
+                                 <img src="images/tata.png" />
+                                <p>$2,5K</p>
+                            </div>
+                        </div>
+					</section>
+                    
+                    <section class="box special features">
+                   	  <div class="features-row">
+                            <span class="icon major tour fa-group"></span>
+                            <h2>Lab staff increased to meet demand</h2>
+                        <p></p>
+                          <table cellpadding="0" cellspacing="0">
+                           	  <tr>
+                               	  <td width="29%"></td>
+                               	  <td width="32%">FY15 (partial)</td>
+                               	  <td width="17%">FY16</td>
+                               	  <td colspan="2">FY17</td>
+                              </tr>
+                            	<tr>
+                            	  <td>Developers</td>
+                            	  <td>2</td>
+                            	  <td>2</td>
+                            	  <td width="11%" align="right">4</td>
+                            	  <td width="11%" align="left"><img src="images/arrowUp_s.png" alt=""/></td>
+                   	          </tr>
+                            	<tr>
+                            	  <td>Researchers</td>
+                            	  <td>2</td>
+                            	  <td>3</td>
+                            	  <td align="right">4</td>
+                            	  <td align="left"><img src="images/arrowUp_s.png" alt=""/></td>
+                   	          </tr>
+                            	<tr>
+                            	  <td>PM</td>
+                            	  <td>-</td>
+                            	  <td>-</td>
+                            	  <td align="right">2</td>
+                            	  <td align="left"><img src="images/arrowUp_s.png" alt=""/></td>
+                   	          </tr>
+                              <!--<tr height="1" padding="0" cellspacing="0" cellpadding="0">
+                            	  <td height="1" colspan="5" bgcolor="#ff6633" padding="0"><img src="images/spacer.png" width="1" height="1" alt=""/></td>
+                           	  </tr>-->
+                            	<tr>
+                            	  <td>Tours</td>
+                            	  <td>82</td>
+                            	  <td>153</td>
+                            	  <td align="right">195</td>
+                            	  <td align="left"><img src="images/arrowUp_s.png" alt=""/></td>
+                   	          </tr>
+                            	<tr>
+                            	  <td>Man hours</td>
+                            	  <td>246</td>
+                            	  <td>459</td>
+                            	  <td align="right">585</td>
+                            	  <td align="left"><img src="images/arrowUp_s.png" alt=""/></td>
+                   	          </tr>
+                          </table>
+                        </div>
+					</section>
+                    
+                    <section class="box special">
+						<header class="major">
+                        	<span class="icon major demo fa-desktop"></span>
+							<h2>2017 Presentations &amp; Demos</h2>
+							<!--<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+							adipiscing nunc adipiscing. Condimentum turpis massa.</p>-->
+						</header>
+						<!--<span><center><iframe class="embed-responsive-item" src="demo.html" scrolling="no" height="600"></iframe></center></span>-->
+                        <span><center><iframe class="embed-responsive-item" src="DemoPresentations.html" scrolling="no" height="450"></iframe></center></span>
+					</section>
+                    
+                    <!--<section class="box special features">-->
+                    	<!--<span class="icon major fa fa-desktop"></span>-->
+                        <!--<div class="features-row">
+                        <span class="icon major demo fa-desktop"></span>
+                        <h2>2017 Presentations & Demos</h2>
+						<div id="content">
+                          <h3>CloudUX</h3>
+                          OAUX Strategy<br>
+                          Released product<br>
+                          Futures<br>
+                          EMA<br>
+                          Visualizations<br>
+                          Extended screen<br>
+                          Session portability
+                      </div>
+                        
+                        <div id="middle">
+                            <h3>Gadget Lab</h3>
+                            Smart Office<br>
+                            Chatbot<br>
+                            Leap + Robot Arm<br>
+                            Muse + Sphere<br>
+                            VR
+                            </ul>
+                        </div>
+                    
+                        <aside id="sidebar">
+                          <h3>3rd Content Area</h3>
+                            	Video Wall<br>
+                                Tabletop computing<br>
+                                Telepresence robot<br>
+                                Collaboration
+                      </aside>
+                      </div>
+					</section>-->
+
+					<!--<div class="row">
+						<div class="6u 12u(narrower)">
+
+							<section class="box special">
+								<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+								<h3>Sed lorem adipiscing</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<ul class="actions">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+
+						</div>
+						<div class="6u 12u(narrower)">
+
+							<section class="box special">
+								<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+								<h3>Accumsan integer</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<ul class="actions">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+
+						</div>
+					</div>-->
+
+				</section>
+
+			<!-- CTA -->
+				<!--<section id="cta">
+
+					<h2>Sign up for beta access</h2>
+					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
+
+					<form>
+						<div class="row uniform 50%">
+							<div class="8u 12u(mobilep)">
+								<input type="email" name="email" id="email" placeholder="Email Address" />
+							</div>
+							<div class="4u 12u(mobilep)">
+								<input type="submit" value="Sign Up" class="fit" />
+							</div>
+						</div>
+					</form>
+
+				</section>-->
+
+			<!-- Footer -->
+				<!--<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>-->
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

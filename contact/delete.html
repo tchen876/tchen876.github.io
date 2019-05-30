@@ -1,0 +1,40 @@
+<!DOCTYPE html>	
+<html>
+<head>    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script> 
+	<script src="contact.js"></script>
+
+  </head>
+
+  
+  <body ng-app="app" ng-controller="Ctrl"> 
+	  <div class="bg-container">
+		<img id="logo" src="img/logo.png" alt="ADS"/>
+		<h1>Contact</h1>
+		<div class="addNew " ng-app="contactApp" >
+			<input id="myInput" ng-model="search" type="text" placeholder="Search..">
+			<button class="rmvBtn" ng-click="remove((list | filter:{check:true}))" ><i class="fa fa-trash"></i> Delete</button>
+			<button class="buttonAddNew"><i class="fa fa-edit"></i> Edit</button>
+			<button class="buttonAddNew" ng-click="add()"><i class="fa fa-plus"></i> Add New</button>
+		</div>
+		  <div>
+         <ul id="contact">
+            <li ng-repeat="values in list | filter:search" class="card">
+			   <label class="checkB" >
+						<input type="checkbox" name="card" ng-model="values.check"><span class="checkmark" ></span>
+					</label>
+				<img src="{{values.CustomerImg}}" alt="">
+				<p><b>{{values.ContactName}}</b></p>
+				<p>{{values.CompanyName}}</p> 
+				<p>{{values.Phone}}</p> 
+            </li>
+         </ul>
+
+		  </div>
+	  </div>
+     </body>
+
+
+</html>
