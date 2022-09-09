@@ -85,6 +85,34 @@
             </div>
             <div class="row">
 				<div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#ca" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/yunex.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Siemens - Yunex Traffic</h4>
+                        <p class="text-muted">UI/UX Design</p>
+                    </div>
+                </div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#dataCapture" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/dataCapture.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Data Capture</h4>
+                        <p class="text-muted">UI/UX Design</p>
+                    </div>
+                </div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#gcps" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -489,7 +517,23 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
-			<li class="timeline-inverted">
+						<li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/siemens.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Oct 2021 - Present</h4>
+                                    <h4 class="subheading">Siemens Yunex Traffic</h4>
+                                    <h5 class="subheading">Sr.UX Specialist</h5>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">•	Monitoring and conducting multiple surveys/studies to understand user “pain points,” backgrounds, and motivations.
+                                    	<br>•	Explore various design approaches to solve specific user problems.</p>
+                                </div>
+                            </div>
+                        </li>
+						<li class="timeline-inverted">
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/ibm.gif" alt="">
                             </div>
@@ -628,6 +672,60 @@
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
+	<!-- Yunex Traffic -->
+	<div class="portfolio-modal modal fade" id="ca" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Yunex</h2>
+                                <p class="item-intro text-muted">Competitor Analyse</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/fullscreen/competitorAnalyse.png" alt="">
+								<p class="item-intro text-muted">User Feedback</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/fullscreen/yunex_feedback.png" alt="">
+								<p class="item-intro text-muted">UX/UI Design</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/fullscreen/yunex_dashboard.png" alt="">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="portfolio-modal modal fade" id="dataCapture" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Data Capture</h2>
+                                <p class="item-intro text-muted">UI/UX Design</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/fullscreen/dataCapture.png" alt="">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 	<!-- Portfolio gcpsPortal -->
 	<div class="portfolio-modal modal fade" id="gcps" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1392,11 +1490,11 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>-->
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!--<script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>-->
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
